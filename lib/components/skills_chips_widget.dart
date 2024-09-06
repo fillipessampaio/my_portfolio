@@ -32,7 +32,7 @@ class _SkillsChipsWidgetState extends State<SkillsChipsWidget> {
     super.initState();
     _model = createModel(context, () => SkillsChipsModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

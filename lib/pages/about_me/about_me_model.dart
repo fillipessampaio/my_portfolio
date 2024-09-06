@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class AboutMeModel extends FlutterFlowModel<AboutMeWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Model for TitleWebBar component.
   late TitleWebBarModel titleWebBarModel;
   // Model for AboutMeContent component.

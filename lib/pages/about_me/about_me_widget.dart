@@ -23,7 +23,7 @@ class _AboutMeWidgetState extends State<AboutMeWidget> {
     super.initState();
     _model = createModel(context, () => AboutMeModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -77,7 +77,7 @@ class _AboutMeWidgetState extends State<AboutMeWidget> {
                                     0.0),
                                 child: wrapWithModel(
                                   model: _model.titleWebBarModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => safeSetState(() {}),
                                   child: const TitleWebBarWidget(),
                                 ),
                               ),
@@ -185,7 +185,7 @@ class _AboutMeWidgetState extends State<AboutMeWidget> {
                                                 model:
                                                     _model.aboutMeContentModel1,
                                                 updateCallback: () =>
-                                                    setState(() {}),
+                                                    safeSetState(() {}),
                                                 child: const AboutMeContentWidget(
                                                   fontSize: 20.0,
                                                   skillsItems: [
@@ -327,7 +327,7 @@ class _AboutMeWidgetState extends State<AboutMeWidget> {
                                               model:
                                                   _model.aboutMeContentModel2,
                                               updateCallback: () =>
-                                                  setState(() {}),
+                                                  safeSetState(() {}),
                                               child: const AboutMeContentWidget(
                                                 fontSize: 16.0,
                                                 skillsItems: [

@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class ContactModel extends FlutterFlowModel<ContactWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Model for TitleWebBar component.
   late TitleWebBarModel titleWebBarModel;
 

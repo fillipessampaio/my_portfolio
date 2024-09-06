@@ -25,7 +25,7 @@ class _TitleWebBarWidgetState extends State<TitleWebBarWidget> {
     super.initState();
     _model = createModel(context, () => TitleWebBarModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override

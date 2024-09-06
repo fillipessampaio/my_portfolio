@@ -47,7 +47,7 @@ class _ProjectThumbnailWidgetState extends State<ProjectThumbnailWidget> {
     super.initState();
     _model = createModel(context, () => ProjectThumbnailModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -134,7 +134,7 @@ class _ProjectThumbnailWidgetState extends State<ProjectThumbnailWidget> {
                   Expanded(
                     child: wrapWithModel(
                       model: _model.buttonSecondaryModel1,
-                      updateCallback: () => setState(() {}),
+                      updateCallback: () => safeSetState(() {}),
                       child: ButtonSecondaryWidget(
                         text: 'App Store',
                         icon: const FaIcon(
@@ -151,7 +151,7 @@ class _ProjectThumbnailWidgetState extends State<ProjectThumbnailWidget> {
                   Expanded(
                     child: wrapWithModel(
                       model: _model.buttonSecondaryModel2,
-                      updateCallback: () => setState(() {}),
+                      updateCallback: () => safeSetState(() {}),
                       child: ButtonSecondaryWidget(
                         text: 'Google Play',
                         icon: const FaIcon(

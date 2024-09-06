@@ -25,7 +25,7 @@ class _ContactWidgetState extends State<ContactWidget> {
     super.initState();
     _model = createModel(context, () => ContactModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -79,7 +79,7 @@ class _ContactWidgetState extends State<ContactWidget> {
                                     0.0),
                                 child: wrapWithModel(
                                   model: _model.titleWebBarModel,
-                                  updateCallback: () => setState(() {}),
+                                  updateCallback: () => safeSetState(() {}),
                                   child: const TitleWebBarWidget(),
                                 ),
                               ),

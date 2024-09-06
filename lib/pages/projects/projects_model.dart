@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 class ProjectsModel extends FlutterFlowModel<ProjectsWidget> {
   ///  State fields for stateful widgets in this page.
 
-  final unfocusNode = FocusNode();
   // Model for TitleWebBar component.
   late TitleWebBarModel titleWebBarModel;
   // Model for ProjectThumbnail component.

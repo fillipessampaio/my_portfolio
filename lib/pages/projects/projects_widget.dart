@@ -23,7 +23,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
     super.initState();
     _model = createModel(context, () => ProjectsModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -84,7 +84,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                         0.0),
                                     child: wrapWithModel(
                                       model: _model.titleWebBarModel,
-                                      updateCallback: () => setState(() {}),
+                                      updateCallback: () => safeSetState(() {}),
                                       child: const TitleWebBarWidget(),
                                     ),
                                   ),
@@ -182,8 +182,8 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                                                 wrapWithModel(
                                                               model: _model
                                                                   .projectThumbnailModel1,
-                                                              updateCallback:
-                                                                  () => setState(
+                                                              updateCallback: () =>
+                                                                  safeSetState(
                                                                       () {}),
                                                               child:
                                                                   const ProjectThumbnailWidget(
@@ -220,8 +220,8 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                                                 wrapWithModel(
                                                               model: _model
                                                                   .projectThumbnailModel2,
-                                                              updateCallback:
-                                                                  () => setState(
+                                                              updateCallback: () =>
+                                                                  safeSetState(
                                                                       () {}),
                                                               child:
                                                                   const ProjectThumbnailWidget(
@@ -249,8 +249,8 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                                                 wrapWithModel(
                                                               model: _model
                                                                   .projectThumbnailModel3,
-                                                              updateCallback:
-                                                                  () => setState(
+                                                              updateCallback: () =>
+                                                                  safeSetState(
                                                                       () {}),
                                                               child:
                                                                   const ProjectThumbnailWidget(
@@ -414,7 +414,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                 children: [
                                   wrapWithModel(
                                     model: _model.projectThumbnailModel4,
-                                    updateCallback: () => setState(() {}),
+                                    updateCallback: () => safeSetState(() {}),
                                     child: const ProjectThumbnailWidget(
                                       picture:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/my-github-page-pcznsb/assets/32isuxx1u197/mockup_hadronlink_connects.png',
@@ -439,7 +439,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                   ),
                                   wrapWithModel(
                                     model: _model.projectThumbnailModel5,
-                                    updateCallback: () => setState(() {}),
+                                    updateCallback: () => safeSetState(() {}),
                                     child: const ProjectThumbnailWidget(
                                       picture:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/my-github-page-pcznsb/assets/8ugkpzundiug/business_card.png',
@@ -453,7 +453,7 @@ class _ProjectsWidgetState extends State<ProjectsWidget> {
                                   ),
                                   wrapWithModel(
                                     model: _model.projectThumbnailModel6,
-                                    updateCallback: () => setState(() {}),
+                                    updateCallback: () => safeSetState(() {}),
                                     child: const ProjectThumbnailWidget(
                                       picture:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/my-github-page-pcznsb/assets/cpxt6k7n6trw/pdf_generation.png',

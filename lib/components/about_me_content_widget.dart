@@ -33,7 +33,7 @@ class _AboutMeContentWidgetState extends State<AboutMeContentWidget> {
     super.initState();
     _model = createModel(context, () => AboutMeContentModel());
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
